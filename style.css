@@ -1,0 +1,55 @@
+html,body {
+    height:100%;
+    width:100%;
+    overflow: hidden;
+    margin: 0;
+}
+.grass, .sky, .road {
+    position: relative;
+}
+.sky {
+    background-color: skyblue;
+    height: 40%;
+}
+.grass {
+      background-color: green;
+      height: 30%;
+}
+.road {
+    height: 30%;
+    background-color: grey;
+    border-top: 10px solid grey;
+    border-bottom: 10px solid grey;
+    width:100%;
+    box-sizing: border-box;
+}
+.lines {
+    box-sizing: border-box;
+    height: 0px;
+    width:100%;
+    border: 3px dotted white;
+    position: absolute;
+    top: 45%;
+}
+.dora {
+    position: absolute;
+    left:0px;
+    top:50px;
+    animation-name: walk;
+    animation-duration: 3s;
+    animation-fill-mode: both;
+    animation-iteration-count:2;
+}
+.lilly {
+    position: absolute;
+    left:0px;
+    top:-100px;
+    animation-name: walk;
+    animation-fill-mode: both;
+    animation-iteration-count: 2;
+    animation-duration: 4s;
+}
+@keyframes walk {
+    from{transform: translateX(-200);}
+    to{transform: translateX(1400px);}
+}
